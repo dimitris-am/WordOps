@@ -268,7 +268,7 @@ class WOSiteUpdateController(CementBaseController):
              (stype == oldsitetype and cache == oldcachetype)) and
                 not (pargs.php70 or pargs.php72 or pargs.php73 or
                      pargs.php74 or pargs.php80 or
-                     pargs.php81 or pargs.php82 or
+                     pargs.php81 or pargs.php82 or pargs.php83 or
                      pargs.alias)):
             Log.info(self, Log.FAIL + "can not update {0} {1} to {2} {3}".
                      format(oldsitetype, oldcachetype, stype, cache))
@@ -396,7 +396,7 @@ class WOSiteUpdateController(CementBaseController):
 
             if (data and (not pargs.php73) and
                 (not pargs.php74) and (not pargs.php72) and
-                    (not pargs.php80) and (not pargs.php81) and (not pargs.php82)):
+                    (not pargs.php80) and (not pargs.php81) and (not pargs.php82) and (not pargs.php83)):
                 data[pargs_version] = bool(old_version_var is True)
                 Log.debug(
                     self, f"data {pargs_version} = {data[pargs_version]}")
